@@ -1,33 +1,18 @@
 <script>
-     import {Container, Row, Col} from "sveltestrap"
+    import PageSection from "../components/PageSection.svelte"
 export let page;
 import {getPageBySlug} from "../api/wordpress"
 import Loading from "../components/Loading.svelte"
-
+// TODO: Redirect on welcome
 $: contentP = getPageBySlug(page)
 </script>
 
 <main>
 {#await contentP}
 <Loading />
-{:then content}
+{:then page}
 
-<Container>
-    <Row>
-        <Col />
-        <Col>
-        <h2>{@html content.title.rendered}</h2>
-        </Col>
-        <Col />
-    </Row>
-    <Row>
-        <Col />
-<Col>
-        {@html content.content.rendered}
-</Col>
-<Col />
-    </Row>
-</Container>
+    <PageSection {page} />
 {:catch}
 There was an error loading the page
 {/await}

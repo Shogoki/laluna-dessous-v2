@@ -1,3 +1,14 @@
 body {
-	text-align: center;
+  text-align: center;
+}
+
+h3 button {
+  font-size: 1.5rem;
+}
+
+section {
+  padding: 40px 0 40px 0;
+}
+section > * {
+  padding-top: 10px;
 }

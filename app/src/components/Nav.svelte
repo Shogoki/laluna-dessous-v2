@@ -27,7 +27,7 @@ const titles = getPages("0")
               {#each pages as page}
               {#if !page.acf.menu_hide}
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="{page.acf.scrollablepage ? `/#${page.slug}` : `/${page.slug}`}">{page.title.rendered}</a>
+                <a class="nav-link " href="{page.acf.scrollablepage ? `/#${page.slug}` : `/${page.slug}`}">{page.title.rendered}</a>
               </li>
               {/if}
               {/each}

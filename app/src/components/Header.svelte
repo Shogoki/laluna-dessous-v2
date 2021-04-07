@@ -6,7 +6,7 @@
         background-repeat: no-repeat;
         background-position: center center;
         margin-top:  55px;
-        margin: 55px 15px 0 15px;
+        /* margin: 55px 15px 0 15px; */
         padding: 156px 0 100px;
     }
 </style>

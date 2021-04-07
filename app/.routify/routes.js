@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.9.0
- * File generated Mon Jan 18 2021 01:01:37 GMT+0100 (Central European Standard Time)
+ * File generated Wed Apr 07 2021 16:11:23 GMT+0200 (Central European Summer Time)
  */
 
 export const __version = "2.9.0"
-export const __timestamp = "2021-01-18T00:01:37.863Z"
+export const __timestamp = "2021-04-07T14:11:23.614Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -48,6 +48,31 @@ export const _tree = {
       "path": "/:page",
       "id": "__page",
       "component": () => import('../src/pages/[page].svelte').then(m => m.default)
+    },
+    {
+      "isFile": true,
+      "isDir": false,
+      "file": "aktuelles.svelte",
+      "filepath": "/aktuelles.svelte",
+      "name": "aktuelles",
+      "ext": "svelte",
+      "badExt": false,
+      "absolutePath": "/Users/s18344/Documents/Dev/laluna-dessous-v2/app/src/pages/aktuelles.svelte",
+      "importPath": "../src/pages/aktuelles.svelte",
+      "isLayout": false,
+      "isReset": false,
+      "isIndex": false,
+      "isFallback": false,
+      "isPage": true,
+      "ownMeta": {},
+      "meta": {
+        "recursive": true,
+        "preload": false,
+        "prerender": true
+      },
+      "path": "/aktuelles",
+      "id": "_aktuelles",
+      "component": () => import('../src/pages/aktuelles.svelte').then(m => m.default)
     },
     {
       "isFile": true,
