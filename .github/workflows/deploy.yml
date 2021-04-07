@@ -38,5 +38,5 @@ jobs:
           # Build directory to deploy
           build_dir: app/public
           # The committer name and email address
-          fqdn: neu.laluna-dessous.de
+          fqdn: www.laluna-dessous.de
       # Runs a single command using the runners shell
