@@ -11,7 +11,7 @@
     <div class="container">
     <div class="row">
         <div class="col-lg-8 mx-auto">
-        <h2>{title}</h2>
+        <h2>{@html title}</h2>
         {#if showDate}
         <h6>{formattedDate}</h6>
         {/if}
