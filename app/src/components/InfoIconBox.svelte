@@ -8,7 +8,7 @@ import {
    ModalBody,
    ModalFooter,
    ModalHeader
- } from 'sveltestrap';
+ } from '../sveltestrap';
  let open = false;
  const toggle = () => (open = !open);
 

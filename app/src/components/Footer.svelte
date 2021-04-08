@@ -1,5 +1,5 @@
  <script>
-   import {Container, Row, Col, Icon} from "sveltestrap"
+   import {Container, Row, Col, Icon} from "../sveltestrap"
  </script>
  
  <!-- Footer -->

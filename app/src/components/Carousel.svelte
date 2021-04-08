@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Carousel, CarouselControl, CarouselItem , Container, Row, Col} from 'sveltestrap';
+    import { Carousel, CarouselControl, CarouselItem , Container, Row, Col} from '../sveltestrap';
     import {getCarouselImages} from "../api/wordpress"
     async function getImageUrls() {
       const items = await getCarouselImages()

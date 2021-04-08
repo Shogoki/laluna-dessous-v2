@@ -1,5 +1,4 @@
  <script>
-import { add_flush_callback } from "svelte/internal"
 import { getPages } from "../api/wordpress"
 const titles = getPages("0")
  </script>
