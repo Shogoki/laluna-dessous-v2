@@ -26,6 +26,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"sveltestrap": "^3.14.0"
+		"sveltestrap": "^5.0.0-beta.3"
 	}
 }

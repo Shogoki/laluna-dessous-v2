@@ -1,9 +1,14 @@
+import { browser } from '$app/env';
+
 export class WordpressAPI {
 	private baseUrl: string;
-	private _fetch;
+	private fetchFunc;
 	constructor(_fetch = fetch, baseUrl: string = 'https://cms.laluna-dessous.de/wp-json/wp/v2/') {
-		this._fetch = _fetch;
+		this.fetchFunc = _fetch;
 		this.baseUrl = baseUrl;
+	}
+	private async _fetch(url, ...args) {
+		return browser ? fetch(url, ...args) : this.fetchFunc(url, ...args);
 	}
 	public async getPages(parent = undefined, orderBy = 'menu_order', perPage = 100, order = 'asc') {
 		console.log('getting pages');
@@ -32,7 +37,7 @@ export class WordpressAPI {
 	}
 
 	public async getPageBySlug(slug) {
-		console.log('Get page by slug', slug);
+		console.log('Browser is', browser);
 		const url = `${this.baseUrl}pages?slug=${slug}`;
 		console.log('url is', url);
 		const result = await this._fetch(url);
@@ -42,7 +47,6 @@ export class WordpressAPI {
 		} else if (pages.length === 0) {
 			console.error('Foundno page for slug', slug);
 		}
-		console.log('Pages are ', pages);
 		return pages[0];
 	}
 

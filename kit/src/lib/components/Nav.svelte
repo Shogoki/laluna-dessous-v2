@@ -1,20 +1,5 @@
-<script context="module">
-	import { WordpressAPI } from '$lib/api/wordpress';
-
-	export async function load({ page, fetch, session, context }) {
-		const api = new WordpressAPI(fetch);
-		console.log('got pages');
-		const pages = await api.getPages(0);
-		return {
-			props: {
-				pages: pages ? pages : []
-			}
-		};
-	}
-</script>
-
-<script lang="ts">
-	export let pages = [];
+<script>
+	export let titles = [];
 </script>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
@@ -23,8 +8,8 @@
 		<button
 			class="navbar-toggler"
 			type="button"
-			data-toggle="collapse"
-			data-target="#navbarResponsive"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarResponsive"
 			aria-controls="navbarResponsive"
 			aria-expanded="false"
 			aria-label="Toggle navigation"
@@ -37,7 +22,7 @@
 					<a class="nav-link js-scroll-trigger" href="/#aboutus">Über uns</a>
 				</li>
 
-				{#each pages as page}
+				{#each titles as page}
 					{#if !page.acf.menu_hide}
 						<li class="nav-item">
 							<a

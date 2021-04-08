@@ -9,6 +9,11 @@
         /* margin: 55px 15px 0 15px; */
         padding: 156px 0 100px;
     }
+@media only screen and (max-width: 660px) {
+  header {
+     background-image: url(/img/laluna_header_mobile.png);
+  }
+}
 </style>
 
 <header class="text-white">

@@ -3,25 +3,20 @@
 
 	export async function load({ page, fetch, session, context }) {
 		const api = new WordpressAPI(fetch);
-		const postPage = await api.getPageBySlug('aktuelles');
-		const posts = await api.getPosts(10);
+		const requestedPage = await api.getPageBySlug(page.params.slug, fetch)
 		return {
 			props: {
-				page: postPage,
-				posts: posts
+				page: requestedPage
 			}
 		};
 	}
 </script>
 
-<script lang="ts">
+<script>
 	import PageSection from '$lib/components/PageSection.svelte';
-	export let page, posts;
+	export let page;
 </script>
 
 <main>
-	<PageSection {page} />
-	{#each posts as post, idx}
-		<PageSection page={post} showDate light={idx % 2 === 0} />
-	{/each}
+		<PageSection {page} />
 </main>
