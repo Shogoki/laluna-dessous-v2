@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  overflow-x: hidden;
+}
+
+h3 button {
+  font-size: 1.5rem;
+}
+
+section {
+  padding: 40px 0 40px 0;
+}
+section > * {
+  padding-top: 10px;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+
+  top: 0;
+
+  height: 100%;
+
+  width: 100%;
+
+  position: absolute;
+}
