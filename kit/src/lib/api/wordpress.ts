@@ -1,4 +1,4 @@
-import { browser } from '$app/env';
+import { browser } from '$app/environment';
 
 export class WordpressAPI {
 	private baseUrl: string;
@@ -28,15 +28,16 @@ export class WordpressAPI {
 		console.log('Aboutus is', pages);
 		//{ title: "Individuell",  iconName: "fa-ruler", content: "loreim Ipsum"}
 		return pages.map((page) => {
-			return {
+			return page ? 
+			 {
 				title: page.title.rendered,
 				content: page.content.rendered,
 				iconName: page.acf.icon_name
-			};
+			} : {title: "", content: "", iconName: ""};
 		});
 	}
 
-	public async getPageBySlug(slug) {
+	public async getPageBySlug(slug: string) {
 		console.log('Browser is', browser);
 		const url = `${this.baseUrl}pages?slug=${slug}`;
 		console.log('url is', url);
@@ -47,6 +48,7 @@ export class WordpressAPI {
 		} else if (pages.length === 0) {
 			console.error('Foundno page for slug', slug);
 		}
+		console.log("returning", pages[0])
 		return pages[0];
 	}
 
