@@ -4,5 +4,5 @@
 </script>
 
 <main>
-  <PageSection {data.page} />
+  <PageSection page={data.page} />
 </main>

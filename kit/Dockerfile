@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.13 as builder
+FROM node:lts-alpine3.17 as builder
 
 WORKDIR /usr/src/app
 COPY package.json .
@@ -7,7 +7,7 @@ RUN yarn
 COPY . .
 RUN yarn build
 
-FROM node:lts-alpine3.13
+FROM node:lts-alpine3.17
 WORKDIR /usr/src/app
 
 RUN apk update && apk upgrade
