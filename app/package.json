@@ -26,7 +26,7 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.11",
+    "sirv-cli": "^1.0.14",
     "sveltestrap": "^5.0.0-beta.3"
   }
 }
